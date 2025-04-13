@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818; /* Ciemniejsze tło */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #111; /* Darker background */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    color: #f5a623; /* Złoty kolor dla nagłówka */
+    font-size: 36px;
+}
+
+.user-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+main {
+    padding: 20px;
+    background-color: #232323; /* Ciemniejszy background dla głównej sekcji */
+}
+
+h2 {
+    color: #f5a623; /* Złoty nagłówek */
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.cases {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.case {
+    background-color: #2a2a2a; /* Ciemnoszare skrzynki */
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.case:hover {
+    background-color: #444; /* Jaśniejszy szary po najechaniu */
+}
+
+button {
+    background-color: #f5a623; /* Złote przyciski */
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc33; /* Złocisty efekt przy najechaniu */
+}
+
+.daily-free button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+#drop-container {
+    display: none;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    color: #f5a623; /* Złota czcionka */
+    font-size: 20px;
+}
+
+#drop-container.show {
+    display: block;
+    animation: dropAnimation 3s ease-in-out;
+}
+
+@keyframes dropAnimation {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(1); }
+}
